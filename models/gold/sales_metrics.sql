@@ -1,4 +1,3 @@
-{{ config(schema='gold') }}
 
 select
     customer_id,

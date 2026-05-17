@@ -1,4 +1,4 @@
-{{ config(schema='silver') }}
+
 
 select
     o_orderkey as order_id,
