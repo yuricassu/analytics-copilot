@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: crm_orders_raw
+    description: >
+      Raw bronze layer containing CRM orders ingested from source systems.
+
+    columns:
+      - name: o_orderkey
+        description: Unique identifier for the order.
+
+      - name: o_custkey
+        description: Customer identifier from CRM source system.
+
+      - name: o_totalprice
+        description: Original total order amount from source.
+
+  - name: orders_cleaned
+    description: >
+      Silver layer containing cleaned and standardized order data.
+
+    columns:
+      - name: order_id
+        description: Standardized unique order identifier.
+
+      - name: customer_id
+        description: Standardized customer identifier.
+
+      - name: revenue
+        description: Revenue amount extracted from source orders.
+
+  - name: sales_metrics
+    description: >
+      Gold layer containing aggregated customer revenue metrics.
+
+    columns:
+      - name: customer_id
+        description: Unique customer identifier.
+
+      - name: total_revenue
+        description: Aggregated total revenue by customer.
