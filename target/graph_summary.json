@@ -1,0 +1,1 @@
+{"_invocation_id": "8b3e9ea8-e3e6-40b3-ade7-231d6633ca91", "linked": {"0": {"name": "model.analytics_copilot.crm_orders_raw", "type": "model", "succ": [2]}, "1": {"name": "model.analytics_copilot.sales_metrics", "type": "model"}, "2": {"name": "model.analytics_copilot.orders_cleaned", "type": "model", "succ": [1]}}}
