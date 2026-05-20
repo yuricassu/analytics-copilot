@@ -1,14 +1,9 @@
-# Name your project! Project names should contain only lowercase characters
-# and underscores. A good package name should reflect your organization's
-# name or the intended use of these models
-
 name: 'analytics_copilot'
 version: '1.0.0'
+config-version: 2
 
-# This setting configures which "profile" dbt uses for this project.
 profile: 'analytics_copilot'
 
-# Paths
 model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
@@ -16,12 +11,10 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-# Directories to be removed by `dbt clean`
 clean-targets:
   - "target"
   - "dbt_packages"
 
-# Model configurations
 models:
   analytics_copilot:
 
