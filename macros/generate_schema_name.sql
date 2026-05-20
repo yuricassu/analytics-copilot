@@ -1,9 +1,15 @@
-{% macro generate_schema_name(custom_schema_name, node) %}
+{% macro generate_schema_name(custom_schema_name=none, node=none) -%}
 
-    {% if custom_schema_name is none %}
-        {{ target.schema }}
-    {% else %}
+    {%- set default_schema = target.schema if target.schema is not none else 'default' -%}
+
+    {%- if custom_schema_name is none or custom_schema_name | trim == '' -%}
+
+        {{ default_schema }}
+
+    {%- else -%}
+
         {{ custom_schema_name | trim }}
-    {% endif %}
 
-{% endmacro %}
+    {%- endif -%}
+
+{%- endmacro %}
